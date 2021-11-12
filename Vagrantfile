@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "control" do |control|
     control.vm.box = "ubuntu/trusty64"
-    control.vm.network "private_network",  ip: "192.168.167.10"
+    control.vm.network "private_network",  ip: "192.168.33.10"
     control.vm.hostname = "control"
     control.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--name","control"]
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "web01" do |web01|
      web01.vm.box = "ubuntu/trusty64"
-     web01.vm.network "private_network",  ip: "192.168.167.11"
+     web01.vm.network "private_network",  ip: "192.168.33.11"
      web01.vm.hostname = "web01"
      web01.vm.provider "virtualbox" do |vb|
        vb.customize ["modifyvm", :id, "--name","web01"]
